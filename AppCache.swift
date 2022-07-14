@@ -17,7 +17,7 @@ class AppCache: NSObject {
     
     // MARK: - VARIABLES
    var selectedProjectId = String()
-    var currentUser: SignupResponseDataModel? {
+    var currentUser: GetUserDetailResponseModel? {
         set {
             if let data = JSONEncoder().convertToData(newValue) {
                 UserDefaults.standard.setValue(data, forKey: AppConstants.UserDefault.currentUser)
